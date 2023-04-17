@@ -5,12 +5,13 @@ import Navbar from "./components/pages/Navbar";
 import About from "./components/pages/About";
 import SearchJob from "./components/pages/SearchJob";
 import Feedback from "./components/pages/Feedback";
-import Login from "./components/authentication/login";
-import Signup from "./components/authentication/signup";
-import Logout from "./components/authentication/logout";
+import Login from "./components/authentication/Login";
+import Signup from "./components/authentication/Signup";
+import ForgetPassword from "./components/authentication/ForgetPassword";
 import Footer from "./components/pages/Footer";
 import StudentProfile from "./components/profileModules/StudentProfile";
 import CompanyProfile from "./components/profileModules/CompanyProfile";
+import NotFound from "./components/pages/NotFound";
 import "./App.css";
 
 const App = () => {
@@ -24,10 +25,11 @@ const App = () => {
           <Route path="/SearchJob" element={<SearchJob />} />
           <Route path="/Feedback" element={<Feedback />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/Logout" element={<Logout />} />
+          <Route path="/ForgetPassword" element={<ForgetPassword />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/StudentProfile" element={<StudentProfile />} />
           <Route path="/CompanyProfile" element={<CompanyProfile />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>
