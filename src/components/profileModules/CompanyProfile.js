@@ -15,8 +15,8 @@ const CompanyProfile = () => {
 
   return (
     <div className="company-profile-container">
-      <h2>Company Profile</h2>
       <form onSubmit={handleSubmit}>
+        <h2>Company Profile</h2>
         <label>
           Company Name:
           <input

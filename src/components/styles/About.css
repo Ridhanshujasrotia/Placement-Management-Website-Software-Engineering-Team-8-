@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 10px;
   padding: 2rem;
 }
 
@@ -118,4 +118,137 @@
   .about-us-animation {
     margin-top: 4rem;
   }
+}
+
+.about-us-team {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+  margin-top: 60px;
+}
+
+.about-us-team h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.about-us-team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-us-team-member {
+  width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-us-team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-team-member-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.about-us-team-member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us-team-member-info {
+  padding: 20px;
+}
+
+.about-us-team-member-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-us-team-member-info p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-team-member {
+    width: 100%;
+  }
+}
+.about-us-future-goals {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+.about-us-future-goals h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.about-us-future-goals:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-future-goals p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about-us-future-goals h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-us-future-goals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-future-goals li {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.about-us-future-goals li:before {
+  list-style: none;
+  color: #f44336;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }

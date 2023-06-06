@@ -1,31 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/signup.css";
 
-const Signup = () => {
+function Signup() {
   return (
-    <div className="signup">
-      <h2>Signup</h2>
+    <div className="Sign-box">
+      <h1>Sign Up</h1>
       <form>
-        <div className="form-control">
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" required />
-        </div>
-        <div className="form-control">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" required />
-        </div>
-        <div className="form-control">
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" required />
-        </div>
-        <button type="submit">Signup</button>
+        <label>
+          First Name:
+          <input type="text" />
+        </label>
+        <label>
+          Last Name:
+          <input type="text" />
+        </label>
+        <label>
+          Email:
+          <input type="email" />
+        </label>
+        <label>
+          Password:
+          <input type="password" />
+        </label>
+        <label>
+          Confirm Password:
+          <input type="password" />
+        </label>
+        <button type="submit">Sign Up</button>
       </form>
-      <p>
-        Already have an account? <Link to="/login">Login</Link>
+      <p className="para">
+        Already have an account? <a href="/Login">Log in</a>
       </p>
     </div>
   );
-};
+}
 
 export default Signup;

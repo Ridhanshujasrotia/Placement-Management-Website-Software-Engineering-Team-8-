@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-container">
         <Link to="/" className="logo">
-          Logo
+          PLACE UR WAY
         </Link>
         <div
           className={`menu-toggle ${showMenu ? "active" : ""}`}
@@ -30,9 +30,9 @@ const Navbar = () => {
         <ul className={`nav-menu ${showMenu ? "active" : ""}`}>
           <li>
             <NavLink
-              exact
+              exact={String(true)}
               to="/"
-              activeClassName="active"
+              activeclassname="active"
               onClick={handleMenuClick}
             >
               Home
@@ -41,7 +41,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/about"
-              activeClassName="active"
+              activeclassname="active"
               onClick={handleMenuClick}
             >
               About
@@ -50,7 +50,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/searchjob"
-              activeClassName="active"
+              activeclassname="active"
               onClick={handleMenuClick}
             >
               Search Job
@@ -59,10 +59,19 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/feedback"
-              activeClassName="active"
+              activeclassname="active"
               onClick={handleMenuClick}
             >
               Feedback
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/Login"
+              activeclassname="active"
+              onClick={handleMenuClick}
+            >
+              Login
             </NavLink>
           </li>
         </ul>

@@ -1,0 +1,42 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.not-found-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: rotate 2s infinite linear;
+}
+
+.not-found-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.not-found-text {
+  font-size: 1.5rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.link-home {
+  font-size: 1.2rem;
+  color: #0077cc;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.link-home:hover {
+  border-bottom: 2px solid #0077cc;
+}
