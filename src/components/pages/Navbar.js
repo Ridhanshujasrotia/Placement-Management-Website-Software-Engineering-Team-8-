@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-container">
         <Link to="/" className="logo">
-          Logo
+          PLACE UR WAY
         </Link>
         <div
           className={`menu-toggle ${showMenu ? "active" : ""}`}

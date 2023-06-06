@@ -1,7 +1,11 @@
 import "../styles/Home.css";
 
 function Home() {
-  // const images = require.context("../images", false, /\.(png|jpe?g|svg)$/);
+  // const images = require.context(
+  //   ".../assets/images/",
+  //   false,
+  //   /\.(png|jpe?g|svg)$/
+  // );
 
   // // map over the array to create a card for each company image
   // const imageCards = images.keys().map((image, index) => (
@@ -24,7 +28,7 @@ function Home() {
         </p>
         <div className="section1-image right">
           <img
-            src="https://via.placeholder.com/400x300"
+            src="https://dme.ac.in/wp-content/uploads/2021/06/placement-3.png"
             alt="Placement Management"
           />
         </div>
@@ -63,7 +67,7 @@ function Home() {
         <h3>Our Team</h3>
         <ul>
           <li className="circle-2">
-            Ridhanshu Jasrotia <br></br> Project Manager
+            Ridhanshu Jasrotia <br></br> Coordinator
           </li>
           <li className="circle-2">
             Rahul Rana <br></br> Career Coach

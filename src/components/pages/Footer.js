@@ -18,8 +18,8 @@ function Footer() {
               <FontAwesomeIcon icon={faEnvelope} />
             </div>
             <div className="footer-text">
-              <a href="mailto:info@placementmanagement.com">
-                info@placementmanagement.com
+              <a href="mailto:ridhanshujasrotia14@gmail.com">
+                ridhanshujasrotia14@gmail.com
               </a>
             </div>
           </div>

@@ -26,7 +26,10 @@ function About() {
           </p>
         </div>
         <div className="about-us-image">
-          <img src="https://via.placeholder.com/400x300" alt="companyimage" />
+          <img
+            src="https://www.aipsglobal.com/page_imgs/placement.jpg"
+            alt="companyimage"
+          />
         </div>
       </div>
       <div className="about-us-animation">
