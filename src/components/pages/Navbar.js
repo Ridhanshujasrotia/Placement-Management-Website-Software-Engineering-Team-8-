@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/navbar.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -18,9 +18,14 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-container">
-        <Link to="/" className="logo">
-          PLACE UR WAY
-        </Link>
+        <div className="logo-container">
+          <img
+            src="https://res.cloudinary.com/dipkglaib/image/upload/v1686157611/White___Black_Modern_Photography_Logo__1_-removebg-preview_ea6bl7.png"
+            alt="LOGO"
+            className="logo-img"
+          />
+        </div>
+
         <div
           className={`menu-toggle ${showMenu ? "active" : ""}`}
           onClick={handleToggleMenu}
