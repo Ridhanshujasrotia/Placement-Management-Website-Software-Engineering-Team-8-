@@ -124,7 +124,11 @@ li {
   grid-template-rows: repeat(10, 1fr);
   grid-gap: 10px;
 }
-
+@media screen and (max-width: 600px) {
+  .company-grid {
+    width: 100%; /* Make the cards occupy full width */
+  }
+}
 .section6 {
   background-color: #f4f4f4;
   padding: 60px;
