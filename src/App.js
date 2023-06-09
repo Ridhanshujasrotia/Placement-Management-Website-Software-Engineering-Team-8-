@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/pages/Home";
-import Home2 from "./components/pages/Home2";
-import Navbar from "./components/pages/Navbar";
-import About from "./components/pages/About";
-import SearchJob from "./components/pages/SearchJob";
-import Feedback from "./components/pages/Feedback";
-import Footer from "./components/pages/Footer";
-import CheckLogin from "./components/pages/CheckLogin";
-import NotFound from "./components/pages/NotFound";
+import Home from "./pages/Home";
+import Home2 from "./pages/Home2";
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import SearchJob from "./pages/SearchJob";
+import Feedback from "./pages/Feedback";
+import Footer from "./components/Footer";
+import CheckLogin from "./pages/CheckLogin";
+import NotFound from "./components/NotFound";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./App.css";
 const App = () => {

@@ -12,7 +12,6 @@ function Footer() {
     <div className="footer-container">
       <div className="footer-row">
         <div className="footer-column">
-          <h3>Contact Us</h3>
           <div className="footer-contact">
             <div className="footer-icon">
               <FontAwesomeIcon icon={faEnvelope} />

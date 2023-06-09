@@ -11,10 +11,12 @@ const Feedback = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="fade-in">Feedback Page</h1>
-      <form className="fade-in" onSubmit={handleSubmit}>
-        <label htmlFor="feedback">Your Feedback:</label>
+    <div className="container1">
+      <h1 className="fade-in">Please Share Your Feedback With Us</h1>
+      <form className="form-feed fade-in" onSubmit={handleSubmit}>
+        <label htmlFor="feedback" className="labelfeed">
+          Your Feedback:
+        </label>
         <textarea
           id="feedback"
           value={feedback}

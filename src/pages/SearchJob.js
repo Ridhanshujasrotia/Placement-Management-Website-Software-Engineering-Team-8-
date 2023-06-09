@@ -1,7 +1,13 @@
 import React, { useRef, useState } from "react";
 import "../styles/SearchJob.css";
+import AppForm from "../components/AppForm";
+import { storage, firebase } from "../firebaseConfig";
+import Popup from "../components/Popup";
 
 const SearchJob = () => {
+  const [showPopup, setShowPopup] = useState(false); // New state for showing/hiding the popup
+  const [popupMessage, setPopupMessage] = useState(""); // New state for the popup message
+
   const [jobs, setJobs] = useState([
     {
       id: 1,
@@ -208,20 +214,86 @@ const SearchJob = () => {
     });
   };
 
-  const handleApply = (e) => {
+  const handleClosePopup = () => {
+    setShowPopup(false); // Hide the popup
+  };
+
+  const uploadResume = async (file) => {
+    try {
+      const storageRef = storage.ref();
+      const fileName = `resumes/${Date.now()}-${file.name}`;
+      const fileRef = storageRef.child(fileName);
+      let contentType;
+      const fileExtension = file.name.split(".").pop();
+      if (fileExtension === "pdf") {
+        contentType = "application/pdf";
+      } else if (fileExtension === "docx") {
+        contentType =
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+      } else {
+        contentType = "application/octet-stream";
+      }
+      const metadata = {
+        contentType: contentType,
+      };
+      await fileRef.put(file, metadata);
+      const downloadURL = await fileRef.getDownloadURL();
+      return downloadURL;
+    } catch (error) {
+      console.log("Error uploading resume:", error);
+      throw error;
+    }
+  };
+
+  const handleApply = async (e) => {
     e.preventDefault();
-    // Send the application form data to the server or perform necessary actions
-    console.log("Application submitted:", applicationForm);
-    // Clear the application form
-    setApplicationForm({
-      name: "",
-      email: "",
-      resume: "",
-      coverLetter: "",
-      cgpa: "",
-      semester: "",
-    });
-    // Clear the selected job
+
+    try {
+      const resumeFile = e.target.elements.resume.files[0];
+      const resumeURL = await uploadResume(resumeFile);
+      const today = new Date();
+      const formattedDate = `${today.getFullYear()}-${
+        today.getMonth() + 1
+      }-${today.getDate()}`;
+      const response = await fetch(
+        "https://v1.nocodeapi.com/ridhanshu/google_sheets/llkCOrOoeIcTqiLe?tabId=Sheet1",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify([
+            [
+              applicationForm.name,
+              applicationForm.email,
+              resumeURL,
+              applicationForm.cgpa,
+              applicationForm.semester,
+              applicationForm.coverLetter,
+              selectedJob.company,
+              selectedJob.title,
+              formattedDate,
+            ],
+          ]),
+        }
+      );
+      await response.json();
+      setApplicationForm({
+        name: "",
+        email: "",
+        resume: "",
+        coverLetter: "",
+        cgpa: "",
+        semester: "",
+      });
+      setPopupMessage("Applied Successfully");
+      setShowPopup(true);
+    } catch (err) {
+      console.log(err);
+      // Show the error message in the popup
+      setPopupMessage("Error Occurred");
+      setShowPopup(true);
+    }
     setSelectedJob(null);
   };
 
@@ -249,67 +321,17 @@ const SearchJob = () => {
       </div>
       {selectedJob && (
         <div className="job-details" ref={jobDetailsRef}>
+          <h1>{selectedJob.company}</h1>
           <h2>{selectedJob.title}</h2>
           <p>{selectedJob.description}</p>
-          <form onSubmit={handleApply}>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={applicationForm.name}
-              onChange={handleInputChange}
-              required
-            />
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={applicationForm.email}
-              onChange={handleInputChange}
-              required
-            />
-            <label htmlFor="resume">Resume:</label>
-            <input
-              type="file"
-              id="resume"
-              name="resume"
-              value={applicationForm.resume}
-              onChange={handleInputChange}
-              required
-            />
-            <label htmlFor="cgpa">CGPA:</label>
-            <input
-              type="text"
-              id="cgpa"
-              name="cgpa"
-              value={applicationForm.cgpa}
-              onChange={handleInputChange}
-              required
-            />
-            <label htmlFor="semester">Semester:</label>
-            <input
-              type="text"
-              id="semester"
-              name="semester"
-              value={applicationForm.semester}
-              onChange={handleInputChange}
-              required
-            />
-            <label htmlFor="coverLetter">Cover Letter:</label>
-            <textarea
-              id="coverLetter"
-              name="coverLetter"
-              value={applicationForm.coverLetter}
-              onChange={handleInputChange}
-              rows={5}
-              required
-            ></textarea>
-            <button type="submit">Apply</button>
-          </form>
+          <AppForm
+            applicationForm={applicationForm}
+            handleInputChange={handleInputChange}
+            handleApply={handleApply}
+          />
         </div>
       )}
+      {showPopup && <Popup message={popupMessage} onClose={handleClosePopup} />}
     </div>
   );
 };

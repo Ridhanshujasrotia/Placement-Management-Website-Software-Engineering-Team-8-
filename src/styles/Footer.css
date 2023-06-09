@@ -16,7 +16,10 @@
   max-width: 1200px;
   margin-bottom: 2rem;
 }
-
+.footer-icon {
+  margin-top: 20px;
+  margin-right: 10px;
+}
 .footer-column {
   flex: 1;
   margin: 1rem;
@@ -29,7 +32,7 @@
 
 .footer-contact {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin-bottom: 1rem;
 }

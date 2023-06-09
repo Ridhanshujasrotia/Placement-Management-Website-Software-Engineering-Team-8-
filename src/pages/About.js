@@ -1,8 +1,8 @@
 import "../styles/About.css";
-import ContactRidhanshu from "./developer";
-import { ContactRahulRana } from "./developer";
-import { ContactRiya } from "./developer";
-import { ContactRahuKumar } from "./developer";
+import ContactRidhanshu from "../components/developer";
+import { ContactRahulRana } from "../components/developer";
+import { ContactRiya } from "../components/developer";
+import { ContactRahuKumar } from "../components/developer";
 
 function About() {
   return (

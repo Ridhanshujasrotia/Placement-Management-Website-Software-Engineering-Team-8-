@@ -49,43 +49,14 @@
   padding-right: 200px;
 }
 
-.job-details form label {
-  display: block;
-  margin-top: 10px;
-}
-
-.job-details form input,
-.job-details form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.job-details form button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.job-details form button:hover {
-  background-color: #0056b3;
-}
-
 h1 {
   margin-top: 20px;
-}
-
-.job-search {
-  position: relative;
 }
 
 .scrolling-text-container {
   width: 100%;
   overflow: hidden;
+  background-color: rgb(212, 238, 238);
 }
 
 .scrolling-text {
@@ -104,9 +75,6 @@ h1 {
   }
 }
 
-form {
-  margin-top: 150px;
-}
 .company-logo {
   width: 150px; /* Adjust the width and height as needed */
   height: 100px;
@@ -115,6 +83,7 @@ form {
 .scrolling-text {
   font-size: 24px;
   margin-top: 10px;
+  margin-bottom: 5px;
   font-weight: bold;
   color: #fff;
   background-color: #238eda;
