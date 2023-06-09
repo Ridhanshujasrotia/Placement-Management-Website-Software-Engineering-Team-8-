@@ -8,6 +8,7 @@ import Feedback from "./pages/Feedback";
 import Footer from "./components/Footer";
 import CheckLogin from "./pages/CheckLogin";
 import NotFound from "./components/NotFound";
+import ContactUs from "./pages/ContactUs";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./App.css";
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/About" element={<About />} />
             <Route path="/SearchJob" element={<SearchJob />} />
             <Route path="/Feedback" element={<Feedback />} />
+            <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         ) : (
@@ -33,7 +35,7 @@ const App = () => {
             <Route path="/Feedback" element={<CheckLogin />} />
             <Route path="/StudentProfile" element={<CheckLogin />} />
             <Route path="/CompanyProfile" element={<CheckLogin />} />
-
+            <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         )}

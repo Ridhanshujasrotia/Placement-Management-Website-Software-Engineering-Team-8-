@@ -12,13 +12,13 @@ const SearchJob = () => {
     {
       id: 1,
       title: "Software Engineer",
-      description: `We are looking for a skilled software engineer with expertise in developing software applications and systems. 
+      JobRequirements: `We are looking for a skilled software engineer with expertise in developing software applications and systems. 
                     The ideal candidate will have strong programming skills in languages such as Java, Python, C++, or JavaScript.
                     They should also have experience with software development frameworks and libraries, such as Spring (Java), Django(Python), or React(JavaScript).
                     Proficiency in database technologies, such as MySQL, MongoDB, or PostgreSQL, for data storage and retrieval is required.
                     Familiarity with version control systems like Git for collaborative development and code management is essential.
-                    Knowledge of software development methodologies like Agile or Scrum for efficient project management is a plus.\n\n
-                    Skills: \n - Strong programming skills in languages such as Java, Python, C++, or JavaScript.\n 
+                    Knowledge of software development methodologies like Agile or Scrum for efficient project management is a plus.\n\n`,
+      Skills: `\n - Strong programming skills in languages such as Java, Python, C++, or JavaScript.\n 
                     - Experience with software development frameworks and libraries, such as Spring (Java), Django(Python), or React(JavaScript).\n 
                     - Proficiency in database technologies, such as MySQL, MongoDB, or PostgreSQL, for data storage and retrieval.\n 
                     - Familiarity with version control systems like Git for collaborative development and code management.\n 
@@ -37,10 +37,8 @@ const SearchJob = () => {
     {
       id: 2,
       title: "Data Analyst Intern",
-      description: `Job Requirements:
-                    Exciting internship opportunity for a data analyst to gain practical experience in analyzing and interpreting data.
-                    Skills:
-                    Proficiency in data analysis tools such as Microsoft Excel or Google Sheets for data manipulation and analysis.
+      JobRequirements: `Exciting internship opportunity for a data analyst to gain practical experience in analyzing and interpreting data.`,
+      Skills: `Proficiency in data analysis tools such as Microsoft Excel or Google Sheets for data manipulation and analysis.
                     Strong SQL skills for querying databases and extracting relevant data.
                     Familiarity with statistical analysis techniques, including hypothesis testing, regression analysis, or clustering algorithms.
                     Experience with data visualization tools such as Tableau, Power BI, or matplotlib for creating insightful visualizations.
@@ -56,10 +54,9 @@ const SearchJob = () => {
     {
       id: 3,
       title: "Graphic Designer",
-      description: `Job Requirements:
-                    Join the creative team as a graphic designer to create visually appealing designs.
-                    Skills:
-                    Proficiency in graphic design software such as Adobe Photoshop, Illustrator, or InDesign.
+      JobRequirements: `
+                    Join the creative team as a graphic designer to create visually appealing designs.`,
+      Skills: `     Proficiency in graphic design software such as Adobe Photoshop, Illustrator, or InDesign.
                     Knowledge of typography, color theory, and composition principles for creating visually appealing designs.
                     Experience with prototyping tools like Adobe XD or Sketch for creating interactive design mockups.
                     Familiarity with web design technologies like HTML and CSS for creating web-based designs.
@@ -74,9 +71,9 @@ const SearchJob = () => {
     {
       id: 4,
       title: "Financial Analyst",
-      description: `Job Requirements:
-                    Hiring a financial analyst to provide insights and analysis on financial data.
-                    Skills:
+      JobRequirements: `
+                    Hiring a financial analyst to provide insights and analysis on financial data.`,
+      Skills: `
                     Strong analytical skills with proficiency in financial modeling and forecasting.
                     Knowledge of financial analysis techniques such as ratio analysis, discounted cash flow (DCF) analysis, or scenario analysis.
                     Proficiency in financial software and tools such as Excel, Bloomberg, or MATLAB for data analysis and modeling.
@@ -91,17 +88,25 @@ const SearchJob = () => {
     {
       id: 5,
       title: "Sales Representative",
-      description: "Join our sales team and help us reach new customers...",
+      JobRequirements: "Join our sales team and help us reach new customers...",
       company: "Salesforce",
       Companylogo:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYDyqh5PHg4He2I9HQEDfBNpxxttFog73ODw&usqp=CAU",
+      Skills: `
+                    Strong analytical skills with proficiency in financial modeling and forecasting.
+                    Knowledge of financial analysis techniques such as ratio analysis, discounted cash flow (DCF) analysis, or scenario analysis.
+                    Proficiency in financial software and tools such as Excel, Bloomberg, or MATLAB for data analysis and modeling.
+                    Familiarity with financial databases and research platforms like Capital IQ or FactSet.
+                    Relevant Technologies and Packages:
+                    Financial Analysis: Microsoft Excel (Advanced Formulas, PivotTables), Bloomberg Terminal, MATLAB, R
+                    Financial Databases: Capital IQ, FactSet, Morningstar Direct`,
     },
     {
       id: 6,
       title: "UX/UI Designer",
-      description: `Job Requirements:
-                    Opening for a talented UX/UI designer to create engaging user experiences.
-                    Skills:
+      JobRequirements: `
+                    Opening for a talented UX/UI designer to create engaging user experiences.`,
+      Skills: `
                     Proficiency in design tools such as Adobe XD, Sketch, or Figma for creating wireframes, prototypes, and user interfaces.
                     Understanding of user-centered design principles and best practices.
                     Familiarity with usability testing and user research techniques for gathering feedback and insights.
@@ -117,9 +122,10 @@ const SearchJob = () => {
     {
       id: 7,
       title: "Project Manager intern",
-      description: `Job Requirements:
+      JobRequirements: `
                     Seeking an experienced project manager to lead teams and ensure project success.
-                    Skills:
+                    `,
+      Skills: `
                     Strong leadership and communication skills for effectively managing and coordinating project teams.
                     Proficiency in project management methodologies such as Agile, Scrum, or Waterfall for efficient project execution.
                     Familiarity with project management tools like JIRA, Asana, or Trello for task tracking and collaboration.
@@ -133,9 +139,10 @@ const SearchJob = () => {
     {
       id: 8,
       title: "Business Analyst",
-      description: `Job Requirements:
+      JobRequirements: `
                     Join the team as a business analyst and drive data insights.
-                    Skills:
+                    `,
+      Skills: `
                     Strong analytical and problem-solving skills for analyzing business data and identifying improvement opportunities.
                     Proficiency in data analysis tools such as Excel, SQL, or Python for data manipulation and visualization.
                     Familiarity with business intelligence (BI) platforms like Power BI or Tableau for creating dashboards and reports.
@@ -150,9 +157,10 @@ const SearchJob = () => {
     {
       id: 9,
       title: "HR Intern",
-      description: `Job Requirements:
+      JobRequirements: `
                     Hiring an HR coordinator to support the HR department.
-                    Skills:
+                    `,
+      Skills: `
                     Strong organizational and administrative skills for managing HR-related tasks.
                     Familiarity with HR software and tools for managing employee data and HR processes.
                     Good communication skills for effectively interacting with employees and handling HR-related inquiries.
@@ -166,9 +174,10 @@ const SearchJob = () => {
     {
       id: 10,
       title: "Content Writer",
-      description: `Job Requirements:
+      JobRequirements: `
                     Looking for a skilled content writer to create engaging content.
-                    Skills:
+                    `,
+      Skills: `
                     Excellent writing and editing skills with a strong command of grammar and vocabulary.
                     Proficiency in content management systems (CMS) such as WordPress or Drupal for content creation and publishing.
                     Familiarity with search engine optimization (SEO) techniques for optimizing content for search engines.
@@ -323,7 +332,8 @@ const SearchJob = () => {
         <div className="job-details" ref={jobDetailsRef}>
           <h1>{selectedJob.company}</h1>
           <h2>{selectedJob.title}</h2>
-          <p>{selectedJob.description}</p>
+          Job Role :<p>{selectedJob.JobRequirements}</p>
+          Skills :<p>{selectedJob.Skills}</p>
           <AppForm
             applicationForm={applicationForm}
             handleInputChange={handleInputChange}

@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Home.css";
-
+import Testimonials from "../components/Testinomials";
 function Home() {
   // Array of image URLs
   const imageUrls = [
@@ -207,6 +207,9 @@ function Home() {
             success.
           </p>
         </ul>
+      </div>
+      <div className="testimonils">
+        <Testimonials />
       </div>
     </div>
   );

@@ -72,6 +72,15 @@ const Navbar = () => {
               Feedback
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/ContactUs"
+              activeclassname="active"
+              onClick={handleMenuClick}
+            >
+              Contact Us
+            </NavLink>
+          </li>
           {isAuthenticated ? (
             <li>
               <button
@@ -92,5 +101,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
